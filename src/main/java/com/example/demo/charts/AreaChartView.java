@@ -6,8 +6,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 /**
- * Vaadin の Chart を使うためには、 
- * build.gradle の dependancies セクションの中に下記の一行を追加してください。
+ * ① Vaadin の Chart を使うためには、 build.gradle の dependancies セクションの中に下記の一行を追加してください。
  * implementation 'com.vaadin:vaadin-charts-flow'
  */
 @Route("area-chart")
@@ -19,25 +18,25 @@ public class AreaChartView extends VerticalLayout {
 
     public AreaChartView() {
 
-        Chart chart = new Chart(ChartType.AREA);
+        Chart chart = new Chart(ChartType.AREA); // ②
         chart.setWidthFull();
         chart.setHeight("600px");
 
-        XAxis xAxis = new XAxis();
+        XAxis xAxis = new XAxis(); // ③
         xAxis.setCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun");
 
-        PlotOptionsArea options = new PlotOptionsArea();
+        PlotOptionsArea options = new PlotOptionsArea(); // ④
         options.setStacking(Stacking.NORMAL);
 
-        ListSeries s1 = new ListSeries("Data 1", data1);
-        ListSeries s2 = new ListSeries("Data 2", data2);
-        ListSeries s3 = new ListSeries("Data 2", data2);
+        ListSeries s1 = new ListSeries("Data 1", data1); // ⑤
+        ListSeries s2 = new ListSeries("Data 2", data2); // ⑤
+        ListSeries s3 = new ListSeries("Data 2", data2); // ⑤
 
         s1.setPlotOptions(options);
         s2.setPlotOptions(options);
         s3.setPlotOptions(options);
 
-        Configuration config = chart.getConfiguration();
+        Configuration config = chart.getConfiguration(); // ⑥
         config.setTitle("Area Chart");
         config.addxAxis(xAxis);
         config.addSeries(s1);

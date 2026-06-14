@@ -6,8 +6,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 /**
- * Vaadin の Chart を使うためには、 
- * build.gradle の dependancies セクションの中に下記の一行を追加してください。
+ * ① Vaadin の Chart を使うためには、 build.gradle の dependancies セクションの中に下記の一行を追加してください。
  * implementation 'com.vaadin:vaadin-charts-flow'
  */
 @Route("pie-chart")
@@ -17,19 +16,19 @@ public class PieChartView extends VerticalLayout {
 
     public PieChartView() {
 
-        Chart chart = new Chart(ChartType.PIE);
+        Chart chart = new Chart(ChartType.PIE); // ①
         chart.setWidthFull();
         chart.setHeight("600px");
 
-        DataSeries series = new DataSeries();
-        series.add(new DataSeriesItem("Jan", data[0]));
-        series.add(new DataSeriesItem("Feb", data[1]));
-        series.add(new DataSeriesItem("Mar", data[2]));
-        series.add(new DataSeriesItem("Apr", data[3]));
-        series.add(new DataSeriesItem("May", data[4]));
-        series.add(new DataSeriesItem("Jun", data[5]));
+        DataSeries series = new DataSeries(); // ②
+        series.add(new DataSeriesItem("Jan", data[0])); // ③
+        series.add(new DataSeriesItem("Feb", data[1])); // ③
+        series.add(new DataSeriesItem("Mar", data[2])); // ③
+        series.add(new DataSeriesItem("Apr", data[3])); // ③
+        series.add(new DataSeriesItem("May", data[4])); // ③
+        series.add(new DataSeriesItem("Jun", data[5])); // ③
 
-        Configuration config = chart.getConfiguration();
+        Configuration config = chart.getConfiguration(); // ④
         config.setTitle("Pie Chart");
         config.setSeries(series);
 
