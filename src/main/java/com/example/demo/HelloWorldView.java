@@ -16,10 +16,10 @@ import com.vaadin.flow.router.Route;
  * 
  * ポイント④：add()メソッドで "こんにちは、世界！" という文字列を画面に表示しています。
  */
-@Route("hello") // ①
-public class HelloWorldView extends VerticalLayout{ // ②
+@Route("hello") // ②
+public class HelloWorldView extends VerticalLayout{ // ③
 
     public HelloWorldView(){
-        add("こんにちは、世界！"); // ③
+        add("こんにちは、世界！"); // ④
     }
 }
