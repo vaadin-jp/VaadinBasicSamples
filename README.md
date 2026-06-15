@@ -1,8 +1,8 @@
 # VaadinBasicSamples
 
 [vaadin.jp](https://vaadin.jp) の公式リポジトリ（Vaadinの基本機能のサンプルコード集）です。  
-[vaadin.jp](https://vaadin.jp) は、[vaadin.com](https://vaadin.com)と協力し、日本向けに情報を発信しています。
-[vaadin.jp](https://vaadin.jp) は、Vaadin社の公式パートナー[SoftCommu]([https://vaadin.com](https://softcommu.com/))によって運営されています。
+[vaadin.jp](https://vaadin.jp) は、[vaadin.com](https://vaadin.com)と協力し、日本向けに情報を発信しています。  
+[vaadin.jp](https://vaadin.jp) は、Vaadin社の公式パートナー[SoftCommu]([https://vaadin.com](https://softcommu.com/))によって運営されています。  
 
 ---
 
